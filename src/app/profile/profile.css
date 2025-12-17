@@ -1,0 +1,6 @@
+h2{
+    color: violet;
+    /* border-color: green; */
+    border: 2px solid green;
+    padding: 5px;
+}

@@ -1,0 +1,72 @@
+.btn{
+    width: 90px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.digit-counter{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.number{
+    width: 100px;
+    height: 35px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+}
+
+.btn-container{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.decrement{
+    background-color: red;
+}
+
+.reset{
+    background-color: yellow;
+}
+
+.increment{
+    background-color: green;
+}
+
+.container1{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.sub-container{
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+}
+
+.inputContainer{
+    width: 100%;
+    /* margin-top: 50px; */
+    display: flex;
+    padding: 50px;
+    flex-direction: row;
+    justify-content: space-around;
+}

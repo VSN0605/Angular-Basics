@@ -1,0 +1,37 @@
+<!-- <h2>{{ myname }}</h2>
+<button (click)="HandleClick()">Click Me</button>
+<app-about></app-about>
+
+<app-profile></app-profile>
+
+<hr> -->
+
+<h2>Counter App</h2> 
+
+<div class="container">
+    <div class="digit-counter">
+        <h3 class="number">{{ count }}</h3>
+    </div>
+    <div class="btn-container">
+        <button  [disabled]="limit" (click)="handleCounter('minus')" class="btn decrement">Decrement</button>
+        <button (click)="handleCounter('reset')" class="btn reset">Reset</button>
+        <button (click)="handleCounter('plus')" class="btn increment">Increment</button>
+    </div>
+</div>
+
+<hr>
+
+<h2>Events</h2>
+
+<button class="MyBtnClass" name="myBtn" (click)="handleEvent($event)">Click Event</button>
+<div class="container">
+    <div class="container1">
+        <div (mouseenter)="handleEvent($event)" style="background-color: green;" class="sub-container"></div>
+        <div (mouseleave)="handleEvent($event)" style="background-color: red;" class="sub-container"></div>
+    </div>
+<br>
+    <div class="inputContainer">
+        <input (input)="handleEvent($event)" type="text" name="testInput" id="">
+        <input (focus)="handleEvent($event)" (blur)="handleEvent($event)" type="text" name="testInput2" id="">
+    </div>
+</div>
