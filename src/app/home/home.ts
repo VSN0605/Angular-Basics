@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { About } from '../about/about';
 import { Login } from '../login/login';
-import { profile } from 'console';
+// import { profile } from 'console';
 import { Profile } from '../profile/profile';
 
 @Component({
@@ -77,5 +77,27 @@ export class Home {
     // console.log("Clicked type event triggered successfully!", event.target);
     // console.log("Clicked target event triggered successfully!", (event.target as Element).className);
     console.log("value", (event.target as HTMLInputElement).value);
+  }
+
+  // function to get value from input while inserting;
+  name = "";
+  displayName = "";
+  getName(event:Event){
+    const inputVal = (event.target as HTMLInputElement).value;
+    // console.log(inputVal);
+    this.name = inputVal;
+  }
+
+  // function to get name and set name;
+  showName() {
+    this.displayName=this.name;
+  }
+
+  setName() {
+    this.name="Vaibhav";
+  }
+
+  getEmail(val:string) {
+    console.log(val);
   }
 }
