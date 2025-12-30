@@ -48,7 +48,62 @@
 <button (click)="setName()">Set Value</button>
 <br>
 <hr>
-<input type="text" placeholder="Enter Email" #emailField>
+<h3>Email: {{ email }}</h3>
+<input type="text" value="{{email}}" placeholder="Enter Email" #emailField>
 <br>
 <button (click)="getEmail(emailField.value)">Get Email</button>
-<button>Set Email</button>
+<button (click)="setEmail()">Set Email</button>
+<br>
+<hr>
+<h3>Toogling Div with If Condition in Angular</h3>
+<button (click)="hide()">Hide Div</button>
+<button (click)="show()">Show Div</button>
+<button (click)="toggle()">Toggle Div</button>
+<br>
+@if(display) {
+    <div class="conditionDiv"></div>
+}
+
+<hr>
+
+<h3>Toogling Div with if else condition</h3>
+<button (click)="tooglingDiv()">{{ btnText }}</button>
+<br>
+<br>
+@if(toggleDiv) {
+    <div style="display: flex; gap: 10px;">
+        <div class="conditionDiv" style="background-color: green;"></div>
+        <div class="conditionDiv" style="background-color: yellow;"></div>
+    </div>
+}@else {
+    <div style="display: flex; gap: 10px;">
+        <div class="conditionDiv" style="background-color: red;"></div>
+        <div class="conditionDiv" style="background-color: pink;"></div>
+    </div>
+}
+
+<br>
+<hr>
+<h3>Else if control flow</h3>
+<div style="display: flex; gap: 10px; padding: 10px;">
+    <button (click)="handleColorBox(1)">RED BOX</button>
+    <button (click)="handleColorBox(2)">BLUE BOX</button>
+    <button (click)="handleColorBox(3)">GREEN BOX</button>
+    <button (click)="handleColorBox(4)">BLACK BOX</button>
+    <input type="text" (input)="handleInput($event)" placeholder="Enter Color Number">
+</div>
+<div style="display: flex; gap: 10px; padding: 10px;">
+    @if(color === 1){
+        <div style="background-color: red; height: 150px; width: 150px;"></div>
+    }
+    @else if(color === 2){
+        <div style="background-color: blue; height: 150px; width: 150px;"></div>
+    }
+    @else if(color === 3){
+        <div style="background-color: green; height: 150px; width: 150px;"></div>
+    }
+    @else{
+        <div style="background-color: black; height: 150px; width: 150px;"></div>
+    }
+    
+</div>

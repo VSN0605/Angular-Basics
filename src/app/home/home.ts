@@ -97,7 +97,58 @@ export class Home {
     this.name="Vaibhav";
   }
 
+  email = "";
   getEmail(val:string) {
     console.log(val);
+    this.email = val;
   }
+
+  setEmail() {
+    this.email = "vaibhav.nanotkar@roboticodigital.com";
+  }
+
+  //if else condition in Angular
+  display:boolean = true;
+  toggleDiv:boolean = true;
+  btnText:string = "Red & Pink";
+
+  hide() {
+    this.display = false;
+    console.log(this.display);
+  }
+
+  show() {
+    this.display = true;
+    console.log(this.display);
+  }
+
+  toggle() {
+    this.display =! this.display;
+    console.log(this.display);
+  }
+
+  tooglingDiv() {
+    this.toggleDiv =! this.toggleDiv;
+
+    if(this.toggleDiv == true) {
+      this.btnText = "Red & Pink";
+    } else {
+      this.btnText = "Green & Yellow";
+    }
+  }
+
+  // Else If control flow;
+  color:number = 0;
+
+  handleColorBox(val:number) {
+    this.color = val
+  }
+
+  handleInput(event: Event) {
+    this.color = parseInt((event.target as HTMLInputElement).value);
+  }
+
+  // otherColorBox() {
+  //   this.color = 0
+  // }
 }
